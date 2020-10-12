@@ -2,6 +2,14 @@
 
 $db = new SQLite3('prueba.db');
 
-$version = $db->querySingle('SELECT SQLITE_VERSION()');
+$db->exec("CREATE TABLE tablaprueba(id INTEGER PRIMARY KEY, txt1 VARCHAR, txt2 VARCHAR)");
+$db->exec("DELETE FROM tablaprueba");
 
-echo $version . "\n";
+for($x=0; $x<10000; $x++)
+{
+    $db->exec("INSERT INTO tablaprueba(txt1, txt2) VALUES('" . md5($x) . "','" . md5($x+1) . "');");
+}
+
+
+
+
