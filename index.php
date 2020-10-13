@@ -3,6 +3,9 @@ echo "<br>" . microtime(TRUE);
 
 $db = new SQLite3('prueba.db');
 
+$db->exec('pragma synchronous = off;');
+
+
 $db->exec("CREATE TABLE tablaprueba(id INTEGER PRIMARY KEY, txt1 VARCHAR, txt2 VARCHAR)");
 echo "<br>" . microtime(TRUE);
 
