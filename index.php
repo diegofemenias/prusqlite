@@ -11,7 +11,7 @@ echo "<br>" . microtime(TRUE);
 
 for($x=0; $x<1000; $x++)
 {
-    $db->exec("INSERT INTO tablaprueba(txt1, txt2) VALUES('" . md5($x) . "','" . md5($x+1) . "');");
+    //$db->exec("INSERT INTO tablaprueba(txt1, txt2) VALUES('" . md5($x) . "','" . md5($x+1) . "');");
     echo "<br>Registro: " . microtime(TRUE);
 
 }
