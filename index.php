@@ -1,4 +1,5 @@
 <?php
+echo microtime(TRUE);
 
 $db = new SQLite3('prueba.db');
 
@@ -12,7 +13,10 @@ for($x=0; $x<1000; $x++)
 
 $last_row_id = $db->lastInsertRowID();
 
-echo "The last inserted row Id is $last_row_id";    
+echo "<br>The last inserted row Id is $last_row_id";    
+
+echo "<br>" . microtime(TRUE);
+
 
 
 
