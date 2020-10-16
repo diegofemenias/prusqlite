@@ -20,7 +20,7 @@ $last_row_id = $db->lastInsertRowID();
 echo "<br>The last inserted row Id is $last_row_id";
 
 echo "<br>Comenzo lectura " . microtime(TRUE);
-$db->exec("SELECT * FROM tablaprueba WHERE txt1 like %a%");
+$db->exec("SELECT * FROM tablaprueba WHERE txt1 like '%a%'");
 echo "<br>Termino lectura " . microtime(TRUE);
 
 
